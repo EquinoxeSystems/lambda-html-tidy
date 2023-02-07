@@ -1,6 +1,6 @@
-BSD 3-Clause License
+/*
 
-Copyright (c) 2023, Rodolfo González González.
+Copyright (c) 2021, Rodolfo González González.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -26,3 +26,24 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+*/
+exports.lambdaHandler = async function(event) {
+    try {
+        let result = '';
+        const cleaner = require('clean-html');
+
+        const input = event['html'];
+        cleaner.clean(input, function(html) {
+            result = html;            
+        });
+
+        return {
+            'html': result
+        }
+    }
+    catch (error) {
+        console.log("ERROR:", error);
+        return null;
+    }
+}
