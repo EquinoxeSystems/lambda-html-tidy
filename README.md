@@ -4,8 +4,8 @@ AWS Lambda to clean HTML from garbage. It uses the Node.js package [clean-html](
 
 ## Notes
 
-* A Dockerfile is provided as a guide for creating the container source of the function. 
-* This function is intended to be called from another function before saving HTML data to a database, in order to clean purify it.
+* A *Dockerfile* is provided as a guide for creating the container source of the function. 
+* This function is intended to be called from another function before saving HTML data to a database, in order to clean it, acting as a filter.
 
 ## License
 
