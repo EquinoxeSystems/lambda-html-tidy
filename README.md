@@ -5,7 +5,11 @@
 ![GitHub issues](https://img.shields.io/github/issues/rgglez/yii-jui) 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/rgglez/yii-jui)
 
-AWS Lambda to clean HTML from garbage. It uses the Node.js package [clean-html](https://www.npmjs.com/package/clean-html) to clean the HTML code.
+AWS Lambda to clean HTML from garbage.
+
+## Dependencies
+
+* [clean-html](https://www.npmjs.com/package/clean-html)
 
 ## Notes
 
